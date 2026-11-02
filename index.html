@@ -196,6 +196,9 @@ h3{font-size:clamp(1.9rem,4.4vw,2.9rem);line-height:.95}
 .founder .media{display:grid;place-items:end center;min-height:420px;--brush-color:var(--hibiscus)}
 .founder .media::before{inset:16% 2% 4% 2%}
 .founder .media img{width:min(100%,460px);border-radius:0;filter:drop-shadow(0 18px 30px oklch(0.12 0.04 258 / .45))}
+.extras{align-items:start}
+.extras > div{max-width:560px}
+@media (min-width:880px){.extras{grid-template-columns:1fr 1fr}}
 
 /* ---------- 05 tickets ---------- */
 .seats{padding:clamp(5rem,12vw,9rem) 0}
@@ -450,6 +453,22 @@ footer p{max-width:80ch;margin:0 0 .5rem}
       <span class="tier-note">Included in: <b>First Class</b></span>
     </div>
   </article>
+
+  <article class="vid extras">
+    <div class="rv">
+      <h3>Going live</h3>
+      <p class="what">From each event, about 15 minutes each</p>
+      <dl class="job"><dt>Its job</dt><dd>Let everyone at home watch the party while it's happening. Seeing their friends have the time of their lives is the fastest way to make someone book the next trip.</dd><dt>The ask</dt><dd class="ask"><span>Join the group</span><span>Book the next trip</span></dd></dl>
+      <p class="where">On your social media, from the pool party, the R&amp;B brunch, the beach party and the themed nights.</p>
+      <span class="tier-note">Included in: <b>First Class</b></span>
+    </div>
+    <div class="rv d1">
+      <h3>Trip photos</h3>
+      <p class="what">From every big moment of the trip</p>
+      <dl class="job"><dt>Its job</dt><dd>Give you a library of the trip for posts, flyers, your group and next year's booking pages, so Cancún keeps selling long after everyone flies home.</dd></dl>
+      <span class="tier-note">Included in: <b>First Class</b></span>
+    </div>
+  </article>
 </section>
 
 <section class="sand proof" aria-labelledby="h-proof">
@@ -492,7 +511,7 @@ footer p{max-width:80ch;margin:0 0 .5rem}
 <section class="sand seats" id="packages" aria-labelledby="h-seats">
   <div class="wrap">
     <h2 id="h-seats" class="rv">Pick your seat.</h2>
-    <p class="lede rv d1">Three ways to bring Cancún home on camera. Every one ends with an ask that points back to your bookings.</p>
+    <p class="lede rv d1">Three ways to bring Cancún home on camera. Every one covers the whole trip, and every video ends with an ask that points back to your bookings.</p>
 
     <div class="tickets">
       <article class="ticket rv">
@@ -503,7 +522,7 @@ footer p{max-width:80ch;margin:0 0 .5rem}
         </div>
         <div class="perf" aria-hidden="true"></div>
         <ul>
-          <li>2 days on site at the big events</li>
+          <li>The whole trip, arrival day to the last night</li>
           <li>The trip film, 60 to 90 seconds</li>
           <li>Cut tall for social and wide for your WeTravel page</li>
           <li>Captions and a Good Vibes end card with the ask</li>
@@ -516,17 +535,15 @@ footer p{max-width:80ch;margin:0 0 .5rem}
         <span class="flag">Recommended</span>
         <div class="t-top">
           <h3 class="t-name">Round Trip</h3>
-          <p class="t-for">The whole trip, plus the proof.</p>
+          <p class="t-for">The trip film, plus the proof.</p>
           <div class="price">$2,000</div>
         </div>
         <div class="perf" aria-hidden="true"></div>
         <ul>
-          <li class="plus">The whole trip, arrival day to the last night</li>
-          <li>The trip film, cut tall and wide, with captions and the end card</li>
+          <li class="plus">Everything in Carry-On</li>
           <li>5 reels, ready the morning after each night</li>
           <li>3 traveler testimonials</li>
           <li>15-second next-trip teaser</li>
-          <li>2 rounds of changes</li>
         </ul>
         <a class="pick" href="sms:+18177071291&amp;body=Hey%20Elliott%2C%20Brandon%20here.%20I%E2%80%99m%20leaning%20Round%20Trip%20for%20Canc%C3%BAn.">Text me: I’m leaning Round Trip</a>
       </article>
@@ -543,6 +560,8 @@ footer p{max-width:80ch;margin:0 0 .5rem}
           <li>10 reels in total, ready the morning after each night</li>
           <li>5 traveler testimonials</li>
           <li>The founder film, shot in Dallas before the trip</li>
+          <li>Going live on your social media from each event, about 15 minutes each</li>
+          <li>Photos from the whole trip</li>
         </ul>
         <a class="pick" href="sms:+18177071291&amp;body=Hey%20Elliott%2C%20Brandon%20here.%20I%E2%80%99m%20leaning%20First%20Class%20for%20Canc%C3%BAn.">Text me: I’m leaning First Class</a>
       </article>
