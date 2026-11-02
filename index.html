@@ -163,6 +163,19 @@ h3{font-size:clamp(1.9rem,4.4vw,2.9rem);line-height:.95}
 .said figure img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:60% 30%;border-radius:6px}
 .said figcaption{margin-top:.8rem;font-size:.9375rem;color:var(--on-sand-2)}
 
+/* ---------- the style (hibiscus drench) ---------- */
+.style{background:var(--hibiscus);color:var(--ink);padding:clamp(5rem,12vw,9rem) 0}
+.style h2{max-width:13ch}
+.style .lede{color:var(--ink);margin-top:1.2rem;max-width:44ch}
+.moves{list-style:none;margin:clamp(2.5rem,5vw,4rem) 0 0;padding:0;display:grid;gap:0 3.5rem;counter-reset:m}
+.moves li{counter-increment:m;border-top:2px solid var(--ink);padding:1.4rem 0 1.8rem;display:grid;gap:.45rem}
+.moves li::before{content:counter(m,decimal-leading-zero);font-family:'Tanker',sans-serif;font-size:1rem;letter-spacing:.06em}
+.moves h3{font-size:clamp(1.8rem,3.6vw,2.5rem);color:var(--ink)}
+.moves p{margin:0;color:var(--ink);font-weight:500;max-width:46ch}
+.moves .hook{margin-top:.5rem;font-family:'Tanker',sans-serif;font-size:clamp(1.35rem,2.4vw,1.7rem);line-height:1.05;color:var(--ink)}
+.moves .hook::before{content:"Sample hook";display:block;font:600 .75rem/1 'General Sans',sans-serif;letter-spacing:.08em;text-transform:uppercase;margin-bottom:.45rem;opacity:.8}
+@media (min-width:880px){.moves{grid-template-columns:1fr 1fr}}
+
 /* ---------- 04 the videos ---------- */
 .videos{padding:clamp(5rem,12vw,9rem) 0 clamp(3rem,6vw,4rem)}
 .videos-head{max-width:var(--max);margin:0 auto;padding:0 var(--pad) clamp(3rem,6vw,5rem)}
@@ -228,7 +241,7 @@ h3{font-size:clamp(1.9rem,4.4vw,2.9rem);line-height:.95}
 .ticket.rec .pick{color:var(--sun)}
 .ticket .flag{position:absolute;top:-.8rem;right:1.2rem;background:var(--sun);color:var(--ink);font-weight:600;font-size:.8125rem;padding:.4em .7em;border-radius:3px}
 @media (min-width:960px){
-  .tickets{grid-template-columns:1fr 1.08fr 1fr;gap:1.6rem}
+  .tickets{grid-template-columns:1fr 1fr 1.08fr;gap:1.6rem}
   .ticket.rec{margin-top:-1.6rem}
 }
 .every{margin-top:clamp(3rem,6vw,4.5rem);display:grid;gap:1.6rem 3rem;border-top:2px solid var(--on-sand);padding-top:2rem}
@@ -395,6 +408,21 @@ footer p{max-width:80ch;margin:0 0 .5rem}
   </div>
 </section>
 
+<section class="style" aria-labelledby="h-style">
+  <div class="wrap">
+    <h2 id="h-style" class="rv">The style you're after.</h2>
+    <p class="lede rv d1">Bold, grown, funny, right in the middle of the party, and always ending with an ask. Here's how we make it Good Vibes Only's own.</p>
+    <ol class="moves">
+      <li class="rv"><h3>Name every moment</h3><p>Every party gets its own name, so it becomes a tradition people talk about all year: the Pool Takeover, the R&amp;B Brunch, the Last Night.</p><p class="hook">"Good Vibes Only takes over Temptation."</p></li>
+      <li class="rv d1"><h3>Talk like the group talks</h3><p>Hooks and captions with personality, written for grown folks who travel to have a good time. Never a brochure.</p><p class="hook">"POV: you almost didn't book."</p></li>
+      <li class="rv"><h3>Day one sets the tone</h3><p>The first reel goes up the morning after arrival: check-ins, first drinks, first dance. Everybody at home sees it started without them.</p><p class="hook">"Cancún, we made it. The tone is set."</p></li>
+      <li class="rv d1"><h3>Let the travelers sell it</h3><p>Post reels as collabs with the travelers and hosts in them and share their best moments, so every video reaches their friends too.</p><p class="hook">"First time out the country. Already asking about Bali."</p></li>
+      <li class="rv"><h3>Put the brand in the shot</h3><p>Good Vibes wristbands, hats and cups, a check-in table people want to film, your name on the DJ booth. When the brand is in the frame, every clip is an ad.</p><p class="hook">"Check-in for Good Vibes Only looks like this."</p></li>
+      <li class="rv d1"><h3>Next year starts on the last night</h3><p>The last-night reel announces the next trip while everyone's still in their feelings.</p><p class="hook">"Same time next year? Drop a comment if you're coming."</p></li>
+    </ol>
+  </div>
+</section>
+
 <section class="ink videos" aria-labelledby="h-videos">
   <div class="videos-head">
     <h2 id="h-videos" class="rv">The videos, and the job each one does.</h2>
@@ -531,8 +559,7 @@ footer p{max-width:80ch;margin:0 0 .5rem}
         <a class="pick" href="sms:+18177071291&amp;body=Hey%20Elliott%2C%20Brandon%20here.%20I%E2%80%99m%20leaning%20Carry-On%20for%20Canc%C3%BAn.">Text me: I’m leaning Carry-On</a>
       </article>
 
-      <article class="ticket rec rv d1">
-        <span class="flag">Recommended</span>
+      <article class="ticket rv d1">
         <div class="t-top">
           <h3 class="t-name">Round Trip</h3>
           <p class="t-for">The trip film, plus the proof.</p>
@@ -548,11 +575,12 @@ footer p{max-width:80ch;margin:0 0 .5rem}
         <a class="pick" href="sms:+18177071291&amp;body=Hey%20Elliott%2C%20Brandon%20here.%20I%E2%80%99m%20leaning%20Round%20Trip%20for%20Canc%C3%BAn.">Text me: I’m leaning Round Trip</a>
       </article>
 
-      <article class="ticket rv d2">
+      <article class="ticket rec rv d2">
+        <span class="flag">Recommended</span>
         <div class="t-top">
           <h3 class="t-name">First Class</h3>
           <p class="t-for">Start selling Cancún before you land.</p>
-          <div class="price">$3,000</div>
+          <div class="price">$2,500</div>
         </div>
         <div class="perf" aria-hidden="true"></div>
         <ul>
@@ -571,7 +599,7 @@ footer p{max-width:80ch;margin:0 0 .5rem}
       <h3>With every package</h3>
       <dl>
         <div><dt>Travel</dt><dd>Good Vibes covers my flight, a room in your block (thank you for offering), and airport rides.</dd></div>
-        <div><dt>Booking your dates</dt><dd>50% holds Sept 16 to 20 for you ($600, $1,000 or $1,500) and is non-refundable. The other 50% is due before I fly.</dd></div>
+        <div><dt>Booking your dates</dt><dd>50% holds Sept 16 to 20 for you ($600, $1,000 or $1,250) and is non-refundable. The other 50% is due before I fly.</dd></div>
         <div><dt>Who's on camera</dt><dd>Only Good Vibes travelers who say yes. A one-line OK to film in your trip booking keeps it simple.</dd></div>
         <div><dt>Turnaround</dt><dd>Reels from each night are ready the next morning, so you can post while you're still in Cancún. The first cut of your trip film lands within 2 weeks of the trip.</dd></div>
       </dl>
