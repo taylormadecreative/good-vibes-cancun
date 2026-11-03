@@ -163,18 +163,59 @@ h3{font-size:clamp(1.9rem,4.4vw,2.9rem);line-height:.95}
 .said figure img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:60% 30%;border-radius:6px}
 .said figcaption{margin-top:.8rem;font-size:.9375rem;color:var(--on-sand-2)}
 
-/* ---------- the style (hibiscus drench) ---------- */
+/* ---------- the research (hibiscus drench) ---------- */
 .style{background:var(--hibiscus);color:var(--ink);padding:clamp(5rem,12vw,9rem) 0}
-.style h2{max-width:13ch}
-.style .lede{color:var(--ink);margin-top:1.2rem;max-width:44ch}
-.moves{list-style:none;margin:clamp(2.5rem,5vw,4rem) 0 0;padding:0;display:grid;gap:0 3.5rem;counter-reset:m}
-.moves li{counter-increment:m;border-top:2px solid var(--ink);padding:1.4rem 0 1.8rem;display:grid;gap:.45rem}
-.moves li::before{content:counter(m,decimal-leading-zero);font-family:'Tanker',sans-serif;font-size:1rem;letter-spacing:.06em}
+.style h2{max-width:15ch}
+.style .lede{color:var(--ink);margin-top:1.2rem;max-width:50ch}
+.moves{list-style:none;margin:clamp(2.5rem,5vw,4rem) 0 0;padding:0;display:grid;counter-reset:m}
+.moves > li{counter-increment:m;border-top:2px solid var(--ink);padding:2rem 0 2.4rem;display:grid;gap:1.6rem 3rem;align-items:center}
+@media (min-width:880px){.moves > li{grid-template-columns:280px 1fr}.moves > li:nth-child(even){grid-template-columns:1fr 280px}.moves > li:nth-child(even) .mv{order:2}}
+.mv{justify-self:center;width:min(280px,78vw)}
+.mtext{display:grid;gap:.55rem}
+.mtext::before{content:counter(m,decimal-leading-zero);font-family:'Tanker',sans-serif;font-size:1rem;letter-spacing:.06em}
 .moves h3{font-size:clamp(1.8rem,3.6vw,2.5rem);color:var(--ink)}
-.moves p{margin:0;color:var(--ink);font-weight:500;max-width:46ch}
-.moves .hook{margin-top:.5rem;font-family:'Tanker',sans-serif;font-size:clamp(1.35rem,2.4vw,1.7rem);line-height:1.05;color:var(--ink)}
-.moves .hook::before{content:"Sample hook";display:block;font:600 .75rem/1 'General Sans',sans-serif;letter-spacing:.08em;text-transform:uppercase;margin-bottom:.45rem;opacity:.8}
-@media (min-width:880px){.moves{grid-template-columns:1fr 1fr}}
+.moves .pair{display:grid;gap:.6rem 2rem}
+@media (min-width:700px){.moves .pair{grid-template-columns:1fr 1fr}}
+.moves .pair p{margin:0;color:var(--ink);font-weight:500;max-width:46ch}
+.moves .pair b{display:block;font:600 .75rem/1 'General Sans',sans-serif;letter-spacing:.08em;text-transform:uppercase;margin-bottom:.4rem;opacity:.85}
+.moves .hook{margin:.4rem 0 0;font-family:'Tanker',sans-serif;font-size:clamp(1.35rem,2.4vw,1.7rem);line-height:1.05;color:var(--ink)}
+.moves .hook::before{content:"Sample hook";display:block;font:600 .75rem/1 'General Sans',sans-serif;letter-spacing:.08em;text-transform:uppercase;margin-bottom:.45rem;opacity:.85}
+/* phone mocks */
+.ph{position:relative;aspect-ratio:9/16;border-radius:30px;overflow:hidden;background:var(--ink);box-shadow:inset 0 0 0 7px var(--ink),0 30px 50px -24px oklch(0.2 0.06 256 / .6)}
+.ph > img,.ph > .scr{position:absolute;inset:7px;width:calc(100% - 14px);height:calc(100% - 14px);object-fit:cover;border-radius:23px}
+.ph .cap{position:absolute;left:18px;right:18px;bottom:20%;z-index:2;margin:0;font:600 1.05rem/1.25 'General Sans',sans-serif;color:oklch(0.99 0.005 84);text-align:center;text-shadow:0 2px 12px oklch(0.12 0.04 258 / .85)}
+.mv-note{margin:.8rem 0 0;text-align:center;font-weight:600;font-size:.875rem;color:var(--ink)}
+/* 01 demo */
+#demo > img{opacity:0}
+#demo > img.on,#demo > img:first-of-type{opacity:1}
+.demo-end{position:absolute;inset:7px;border-radius:23px;background:#021a33;display:grid;place-items:center;align-content:center;gap:.9rem;opacity:0;z-index:3;text-align:center;padding:1rem}
+.demo-end img{width:78%;height:auto}
+.demo-end span{font:600 .95rem/1.3 'General Sans',sans-serif;color:var(--sun)}
+#demo.end .demo-end{opacity:1}
+#demo.end .cap{opacity:0}
+/* 03 named parties */
+.names{display:grid;grid-template-columns:1fr 1fr;gap:.6rem}
+.names figure{margin:0;position:relative;border-radius:8px;overflow:hidden}
+.names img{width:100%;aspect-ratio:4/5;object-fit:cover}
+.names figcaption{position:absolute;left:.4rem;right:.4rem;bottom:.4rem;background:#021a33;color:var(--on-ink);font:400 1rem/1 'Tanker',sans-serif;letter-spacing:.02em;padding:.45em .5em;border-radius:3px;text-align:center}
+/* 04 host announcement */
+.host{background:#021a33;display:grid;grid-template-rows:auto 1fr auto;padding:1.1rem 1rem 1rem;color:var(--on-ink);text-align:center}
+.host .lg{width:70%;margin:0 auto}
+.host .who{position:relative;display:grid;place-items:end center;margin:.4rem -.2rem 0;--brush-color:var(--hibiscus)}
+.host .who::before{inset:22% 0 6% 0}
+.host .who img{width:92%}
+.host .t1{font:600 .75rem/1 'General Sans',sans-serif;letter-spacing:.1em;text-transform:uppercase;color:var(--sun);margin:.6rem 0 .2rem}
+.host .t2{font:400 1.75rem/.95 'Tanker',sans-serif;margin:0}
+.host .t3{font:500 .8rem/1.3 'General Sans',sans-serif;color:var(--on-ink-2);margin:.45rem 0 0}
+.host .t4{display:inline-block;margin:.6rem auto 0;background:var(--sun);color:var(--ink);font:600 .8rem/1 'General Sans',sans-serif;padding:.55em .9em;border-radius:999px}
+/* 06 booking question */
+.form{background:oklch(0.98 0.01 84);color:var(--on-sand);padding:1.4rem 1.1rem;display:grid;align-content:center;gap:.55rem}
+.form .q{font:400 1.45rem/1 'Tanker',sans-serif;margin:0 0 .4rem;color:var(--on-sand)}
+.form .opt{display:flex;align-items:center;gap:.6rem;font:500 .875rem/1.25 'General Sans',sans-serif;padding:.65rem .7rem;border-radius:10px;box-shadow:inset 0 0 0 1.5px oklch(0.85 0.03 80)}
+.form .opt i{flex:none;width:16px;height:16px;border-radius:50%;box-shadow:inset 0 0 0 2px oklch(0.6 0.03 258)}
+.form .opt.sel{box-shadow:inset 0 0 0 2px var(--hibiscus);background:oklch(0.95 0.04 357)}
+.form .opt.sel i{box-shadow:inset 0 0 0 5px var(--hibiscus)}
+.form .go{margin-top:.5rem;text-align:center;background:var(--ink);color:var(--on-ink);font:600 .875rem/1 'General Sans',sans-serif;padding:.85em;border-radius:999px}
 
 /* ---------- 04 the videos ---------- */
 .videos{padding:clamp(5rem,12vw,9rem) 0 clamp(3rem,6vw,4rem)}
@@ -410,15 +451,73 @@ footer p{max-width:80ch;margin:0 0 .5rem}
 
 <section class="style" aria-labelledby="h-style">
   <div class="wrap">
-    <h2 id="h-style" class="rv">The style you're after.</h2>
-    <p class="lede rv d1">Bold, grown, funny, right in the middle of the party, and always ending with an ask. Here's how we make it Good Vibes Only's own.</p>
+    <h2 id="h-style" class="rv">We studied the trips you like.</h2>
+    <p class="lede rv d1">You pointed to Choco Bliss, so I watched their reels frame by frame: every cut, caption and ask. Here's what's working for them, and what it looks like for Good Vibes Only.</p>
     <ol class="moves">
-      <li class="rv"><h3>Name every moment</h3><p>Every party gets its own name, so it becomes a tradition people talk about all year: the Pool Takeover, the R&amp;B Brunch, the Last Night.</p><p class="hook">"Good Vibes Only takes over Temptation."</p></li>
-      <li class="rv d1"><h3>Talk like the group talks</h3><p>Hooks and captions with personality, written for grown folks who travel to have a good time. Never a brochure.</p><p class="hook">"POV: you almost didn't book."</p></li>
-      <li class="rv"><h3>Day one sets the tone</h3><p>The first reel goes up the morning after arrival: check-ins, first drinks, first dance. Everybody at home sees it started without them.</p><p class="hook">"Cancún, we made it. The tone is set."</p></li>
-      <li class="rv d1"><h3>Let the travelers sell it</h3><p>Post reels as collabs with the travelers and hosts in them and share their best moments, so every video reaches their friends too.</p><p class="hook">"First time out the country. Already asking about Bali."</p></li>
-      <li class="rv"><h3>Put the brand in the shot</h3><p>Good Vibes wristbands, hats and cups, a check-in table people want to film, your name on the DJ booth. When the brand is in the frame, every clip is an ad.</p><p class="hook">"Check-in for Good Vibes Only looks like this."</p></li>
-      <li class="rv d1"><h3>Next year starts on the last night</h3><p>The last-night reel announces the next trip while everyone's still in their feelings.</p><p class="hook">"Same time next year? Drop a comment if you're coming."</p></li>
+      <li class="rv">
+        <div class="mv">
+          <div class="ph" id="demo" role="img" aria-label="A day-one recap reel, a new shot on every beat, ending on the Good Vibes Only logo">
+            <img src="assets/img/02-arrival-sm.jpg" alt="" loading="lazy">
+            <img src="assets/img/01-pool-sm.jpg" alt="" loading="lazy">
+            <img src="assets/img/brunch2-sm.jpg" alt="" loading="lazy">
+            <img src="assets/img/04-beach-sm.jpg" alt="" loading="lazy">
+            <img src="assets/img/06-theme-sm.jpg" alt="" loading="lazy">
+            <img src="assets/img/07-group-sm.jpg" alt="" loading="lazy">
+            <p class="cap">Good Vibes Only is officially underway.</p>
+            <div class="demo-end"><img src="assets/img/gvo-logo.png" alt=""><span>Book the next trip</span></div>
+          </div>
+          <p class="mv-note">Watch it: a new shot on every beat.</p>
+        </div>
+        <div class="mtext"><h3>Day one goes up fast</h3><div class="pair"><p><b>What works for them</b>An "officially underway" recap of arrivals, check-in and first drinks, cut to the music with a new shot about every second.</p><p><b>Your version</b>Last night's reel is ready the next morning, shot in the middle of the party and cut to the beat.</p></div><p class="hook">"Good Vibes Only is officially underway."</p></div>
+      </li>
+      <li class="rv">
+        <div class="mv">
+          <div class="ph"><img src="assets/img/checkin.jpg" alt="Day-one check-in: a Good Vibes Only neon sign, navy bucket hats, cups and wristbands, hosts handing out wristbands" loading="lazy"><p class="cap">Check-in for Good Vibes Only looks like this.</p></div>
+          <p class="mv-note">Concept: your check-in, built to be filmed.</p>
+        </div>
+        <div class="mtext"><h3>The brand is in every frame</h3><div class="pair"><p><b>What works for them</b>A branded check-in table, a neon sign, swag bags, matching hats, and the logo on the DJ booth and every end card. Every clip is an ad.</p><p><b>Your version</b>Good Vibes wristbands, hats and cups, a check-in people want to film, DJ Bogey on the booth, and your logo closing every reel.</p></div><p class="hook">"Check-in for Good Vibes Only looks like this."</p></div>
+      </li>
+      <li class="rv">
+        <div class="mv names">
+          <figure><img src="assets/img/01-pool-sm.jpg" alt="The pool party" loading="lazy"><figcaption>The Pool Takeover</figcaption></figure>
+          <figure><img src="assets/img/brunch2-sm.jpg" alt="The R&amp;B brunch" loading="lazy" style="object-position:30% 50%"><figcaption>The R&amp;B Brunch</figcaption></figure>
+          <figure><img src="assets/img/04-beach-sm.jpg" alt="The beach party" loading="lazy"><figcaption>The Beach Party</figcaption></figure>
+          <figure><img src="assets/img/07-group-sm.jpg" alt="The last night" loading="lazy"><figcaption>The Last Night</figcaption></figure>
+        </div>
+        <div class="mtext"><h3>Every party gets a name</h3><div class="pair"><p><b>What works for them</b>The Foam Party. After Dark. Carnival Night. The boat party. Each one comes back every year, so people plan for it.</p><p><b>Your version</b>The Pool Takeover, the R&amp;B Brunch, the Beach Party, the Last Night. Named once, filmed every trip.</p></div><p class="hook">"Good Vibes Only takes over Temptation."</p></div>
+      </li>
+      <li class="rv">
+        <div class="mv">
+          <div class="ph"><div class="scr host">
+            <img class="lg" src="assets/img/gvo-logo.png" alt="">
+            <div class="who brush"><img src="assets/img/brandon.webp" alt="Brandon Hunter as DJ Bogey" loading="lazy"></div>
+            <div><p class="t1">DJ Bogey</p><p class="t2">is taking you to Cancún</p><p class="t3">Sept 16 to 20, 2027 · Temptation Resort</p><span class="t4">Lock your spot · link in bio</span></div>
+          </div></div>
+          <p class="mv-note">Your host announcement.</p>
+        </div>
+        <div class="mtext"><h3>The host sells the trip</h3><div class="pair"><p><b>What works for them</b>Some of their most-watched posts are host announcements: a host on camera saying "I want you to join me."</p><p><b>Your version</b>You're already the host. The founder film puts DJ Bogey on camera, inviting people to Cancún himself.</p></div><p class="hook">"DJ Bogey is taking you to Cancún. Pull up."</p></div>
+      </li>
+      <li class="rv">
+        <div class="mv">
+          <div class="ph"><img src="assets/img/07-group-sm.jpg" alt="The whole group on the beach on the last night" loading="lazy" style="object-position:58% 50%"><p class="cap">Same time next year? Drop a comment if you're coming.</p></div>
+          <p class="mv-note">The last-night reel.</p>
+        </div>
+        <div class="mtext"><h3>The recap sells next year</h3><div class="pair"><p><b>What works for them</b>Their most-watched recent post is the yearly recap, ending with "if you want to join the party, secure your spot."</p><p><b>Your version</b>Your trip film is that recap, and the last-night reel announces the next trip while everyone's still in their feelings.</p></div><p class="hook">"Same time next year? Drop a comment if you're coming."</p></div>
+      </li>
+      <li class="rv">
+        <div class="mv">
+          <div class="ph"><div class="scr form" aria-label="A booking form question: how did you hear about this trip?">
+            <p class="q">How did you hear about this trip?</p>
+            <span class="opt sel"><i></i>The Pool Takeover reel</span>
+            <span class="opt"><i></i>DJ Bogey's video</span>
+            <span class="opt"><i></i>The Cancún trip film</span>
+            <span class="opt"><i></i>A friend in the group</span>
+            <span class="go">Book my spot</span>
+          </div></div>
+          <p class="mv-note">On your booking form.</p>
+        </div>
+        <div class="mtext"><h3>Know what's working</h3><div class="pair"><p><b>What works for them</b>Each campaign gets its own booking link, and the booking form asks how people heard about the trip.</p><p><b>Your version</b>Every video's ask gets its own link, so you can see which video brought the booking and post more of what works.</p></div></div>
+      </li>
     </ol>
   </div>
 </section>
@@ -609,7 +708,7 @@ footer p{max-width:80ch;margin:0 0 .5rem}
 
 
 <section class="close" aria-labelledby="h-close">
-  <img src="assets/img/03-brunch-sm.jpg" srcset="assets/img/03-brunch-sm.jpg 900w, assets/img/03-brunch.jpg 1536w" sizes="(min-width:880px) 55vw, 100vw" alt="Travelers singing along at the private R&amp;B brunch" width="1536" height="1024" loading="lazy">
+  <img src="assets/img/brunch2-sm.jpg" srcset="assets/img/brunch2-sm.jpg 900w, assets/img/brunch2.jpg 1536w" sizes="(min-width:880px) 55vw, 100vw" alt="Travelers singing along at the private R&amp;B brunch" width="1536" height="1024" loading="lazy">
   <div class="copy">
     <div class="brush">
       <h2 id="h-close" class="rv">Let's get Cancún on camera.</h2>
@@ -700,6 +799,22 @@ footer p{max-width:80ch;margin:0 0 .5rem}
   drawPath();
   if (document.fonts && document.fonts.ready) document.fonts.ready.then(drawPath);
   window.addEventListener('resize', drawPath, { passive: true });
+
+  // Reel-style demo: a new frame every beat, then the end card
+  var demo = document.getElementById('demo');
+  if (demo) {
+    var frames = demo.querySelectorAll(':scope > img'), k = 0, timer = null;
+    if (reduce) { document.documentElement.classList.add('reduce'); }
+    else {
+      var step = function(){
+        if (k < frames.length) { frames.forEach(function(f,i){ f.classList.toggle('on', i === k); }); demo.classList.remove('end'); k++; timer = setTimeout(step, 750); }
+        else { demo.classList.add('end'); k = 0; timer = setTimeout(step, 1900); }
+      };
+      new IntersectionObserver(function(es){
+        if (es[0].isIntersecting) { if (!timer) step(); } else { clearTimeout(timer); timer = null; }
+      }, { threshold: 0.3 }).observe(demo);
+    }
+  }
 
   // Phone action bar: show after the hero, hide at the close
   var bar = document.getElementById('bar');
